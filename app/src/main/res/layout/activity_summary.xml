@@ -6,6 +6,29 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/changa_one"
+            android:gravity="center"
+            android:text="Your order:"
+            android:textColor="#181818"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A03D22"
+            android:text="Back" />
+    </LinearLayout>
 
 </LinearLayout>
