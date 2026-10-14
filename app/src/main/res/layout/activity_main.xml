@@ -16,12 +16,52 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
             android:fontFamily="@font/changa_one"
             android:gravity="center"
             android:text="Pizza hat"
             android:textColor="#181818"
             android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvSizeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Choose size:"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/rgSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A03D22"
+                android:buttonTint="#A03D22"
+                android:text="Small" />
+
+            <RadioButton
+                android:id="@+id/rbMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A03D22"
+                android:buttonTint="#A03D22"
+                android:checked="true"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/rbLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#A03D22"
+                android:text="Family" />
+
+        </RadioGroup>
 
         <Button
             android:id="@+id/btnOrder"

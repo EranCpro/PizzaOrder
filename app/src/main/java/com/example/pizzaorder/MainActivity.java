@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    RadioGroup rgSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +27,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        rgSize = findViewById(R.id.rgSize);
+
         Button btnOrder = findViewById(R.id.btnOrder);
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "On the way!", Toast.LENGTH_SHORT).show();
+                int checkedId = rgSize.getCheckedRadioButtonId();
+
+                String size;
+                if (checkedId == R.id.rbSmall) {
+                    size = "Small";
+                } else if (checkedId == R.id.rbMedium) {
+                    size = "Medium";
+                } else {
+                    size = "Family";
+                }
+
+                Toast.makeText(MainActivity.this, "Chosen: " + size, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
                 startActivity(intent);
